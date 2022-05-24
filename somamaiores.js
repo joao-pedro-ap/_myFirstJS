@@ -1,17 +1,20 @@
 function CalcularSomaMaiores() {
 
-    let n1 = prompt("Digite o 1° número:");
-    let n2 = prompt("Digite o 2° número:");
-    let n3 = prompt("Digite o 3° número:");
-    let resultado;
+    var n1 = parseFloat(prompt("Digite o 1° número:"));
+    var n2 = parseFloat(prompt("Digite o 2° número:"));
+    var n3 = parseFloat(prompt("Digite o 3° número:"));
+    var n4 = parseFloat(0);
 
-
-
-    if (n1 >= n2 <= n3) {
-
-        (n1 + n3 == resultado)
-        alert(resultado);
+    if(n1 >= n2 && n2 >= n3){        
+        n4 = n1 + n2
+    }
+    else if(n1 >= n2 && n3 >= n2){
+        n4 = n1 + n3
+    }
+    else{
+        n4 = n3 + n2
     }
 
-
+    alert(n4)
 }
+    

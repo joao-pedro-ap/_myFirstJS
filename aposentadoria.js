@@ -1,40 +1,21 @@
 function CalcularAposentadoria() {
-    let nome = prompt("Digite o seu nome:");
-    let peso = parseFloat(prompt("Digite o seu peso:"));
-    let altura = parseFloat(prompt("Digite a sua altura:"));
-    let imc = 0;
-    let resultado;
+    var nome = prompt("Nome do usuário");
+    var DTnscmt = parseFloat(prompt("Data de nascimento"));
+    var DTadmss = parseFloat(prompt("Data de admissão"));
+    var idd = parseFloat()
+    var admss = parseFloat(0)
 
-    imc = peso / (altura * altura);
-
-    console.log(imc);
-
-
-    if (imc < 18.5) {
-        resultado = "Abaixo do peso"
+    idd = 2022 - DTnscmt
+    admss = 2022 - DTadmss
+    if (idd >= 65) {
+        if (admss >= 30) {
+            alert("Requerer")
+        }
     }
-
-    if (imc >= 18.5 && imc < 25) {
-        resultado = "Peso normal"
+    else if (idd >= 60 && admss >= 25) {
+        alert("Requerer")
     }
-
-    else if (imc >= 25 && imc < 30) {
-        resultado = "Sobrepeso"
-    }
-
-    
-    else if (imc >= 30 && imc < 35) {
-        resultado = "Obesidade"
-    }
-
-
-    else if (imc >= 35 && imc < 40) {
-        resultado = "Peso Obesidade 2"
-    }
-
     else {
-        resultado = "Peso Obesidade 3"
+        alert("Não requerer")
     }
-alert(nome + " possui o imc " + imc + " e está " + resultado);
-
 }
