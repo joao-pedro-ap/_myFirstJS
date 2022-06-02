@@ -44,6 +44,6 @@ div {
 }
 
 #BtnEnviar:hover{
-    background-color: rgba(74, 86, 255, 0.87);
+    background-color: rgba(74, 86, 255, 0.665);
     transition: background-color 2s ease-in-out;
 }

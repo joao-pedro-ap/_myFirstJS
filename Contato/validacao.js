@@ -15,7 +15,7 @@ function ValidarFormulario() {
 
     else if
         (validateEmail(document.getElementById('Email').value) == false) {
-        erro += "O e-mail digitado é inválido. \n"
+        erro += "O e-mail digitado é inválido. \n";
     }
 
     if (document.getElementById('Cpf').value.trim() == "") {
@@ -27,17 +27,43 @@ function ValidarFormulario() {
         erro += "O CPF digitado é inválido. \n";
     }
 
-    if (erro != "") {
-        alert("Atenção!\n\n" + erro);
-        return false;
+    if (document.getElementById('Bairro').selectedIndex == 0) {
+        erro += "O campo bairro é obrigatório.\n";
+
+        let opcoes = document.getElementsByName('FormaContato');
+        let selecionados = 0;
+        for (let i = 0; i < opcoes.length; i++) {
+            if (opcoes[i].checked) {
+                selecionados += 1;
+            }
+        }
+
+        if (selecionados == 0) {
+            erro += "O campo forma de contato é obrigatória\n"
+        }
     }
 
     else {
-        document.getElementById('frmContato').submit();
+        $('#frmContato').submit();
+
     }
 
     if (document.getElementById('Bairro').value.trim() == "") {
         erro += "O campo bairro é obrigatório\n";
+    }
+
+
+    else if (document.getElementById('Servico').value.trim() == "") {
+        erro += "O campo serviços de interesse é obrigatório\n";
+    }
+
+if (selecionados == 0){
+    erro += 0
+}
+
+    if (erro != "") {
+        alert("Atenção!\n\n" + erro);
+        return false;
     }
 
 }
