@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="estilo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <title>Contato</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Calculadora de IMC</h1>
+
+        <labeL>Informe seu peso (kg)</labeL>
+        <input type="text" name="Peso">
+
+        <labeL>Informe sua altura (metro)</labeL>
+        <input type="text" name="Metro">
+
+        <input class="calcular" type="button" name="BtnCalcular" id="BtnCalcular" value="Calcular"
+            onclick="CalcularFormulario()">
+
+    </div>
+
+    <div id="ex1" class="modal">
+        <p>Thanks for clicking. That felt good.</p>
+        <a href="#" rel="modal:close">Close</a>
+    </div>
+
+    <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+
+</body>
+
+</html>
