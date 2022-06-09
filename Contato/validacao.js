@@ -1,8 +1,8 @@
 function ValidarFormulario() {
     let erro = "";
 
-    if (document.getElementById('Nome').value.trim() == "") {
-        erro = "O campo nome é obrigatório\n";
+    if (document.getElementById('Quilo').value.trim() == "") {
+        erro = "O campo quilo é obrigatório\n";
     }
 
     if (document.getElementById('Telefone').value.trim() == "") {
@@ -106,6 +106,7 @@ function validarCPF(cpf) {
 }
 
 $(document).ready(function () {
+    $('.quilo').mask('');
     $('.date').mask('00/00/0000');
     $('.time').mask('00:00:00');
     $('.date_time').mask('00/00/0000 00:00:00');
